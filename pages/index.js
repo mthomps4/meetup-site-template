@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import Button from '../components/button';
+import Button, { StyledButton } from '../components/button';
 import Main from '../layouts/main';
 
-const StyledButton = styled(Button)`
+const ExtendedButton = styled(StyledButton)`
   /* Adapt the colors based on primary prop */
   background-color: green;
   color: white;
@@ -31,7 +31,7 @@ const Home = () => (
 
     <Button handleOnClick={e => handleNormalClick(e)}>Normal Button</Button>
 
-    <StyledButton>Extended Button</StyledButton>
+    <ExtendedButton>Extended Button</ExtendedButton>
 
     <div className="hero">
       <h1 className="title">Welcome to JsLou!</h1>

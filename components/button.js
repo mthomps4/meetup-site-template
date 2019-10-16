@@ -1,6 +1,6 @@
 import styled from 'styled-components';
 
-const StyledButton = styled.button`
+export const StyledButton = styled.button`
   /* Adapt the colors based on primary prop */
   background: ${({ theme, primary }) =>
     primary ? theme.button.colors.primary : theme.button.colors.white};
