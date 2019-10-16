@@ -1,41 +1,47 @@
 import React from 'react'
-import Head from 'next/head'
-import Nav from '../components/nav'
+import Main from '../layouts/main'
+import styled from 'styled-components'
+
+const FakeButton = styled.button`
+  /* Adapt the colors based on primary prop */
+  background: ${props => props.primary ? "red" : "white"};
+  color: ${props => props.primary ? "white" : "red"};
+
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid red;
+  border-radius: 3px;
+` 
 
 const Home = () => (
-  <div>
-    <Head>
-      <title>Home</title>
-      <link rel='icon' href='/favicon.ico' />
-    </Head>
-
-    <Nav />
+  <Main>
+    <FakeButton>FAKE BUTTON</FakeButton>
+    <FakeButton primary>FAKE BUTTON w/ Props</FakeButton>
 
     <div className='hero'>
-      <h1 className='title'>Welcome to Next.js!</h1>
+      <h1 className='title'>Welcome to JsLou!</h1>
       <p className='description'>
-        To get started, edit <code>pages/index.js</code> and save to reload.
+        Louisville Kentucky's Meetup for all things JavaScript.
       </p>
 
       <div className='row'>
-        <a href='https://nextjs.org/docs' className='card'>
-          <h3>Documentation &rarr;</h3>
-          <p>Learn more about Next.js in the documentation.</p>
+        <a href='/speakers' className='card'>
+          <h3>Speakers &rarr;</h3>
+          <p>Meet our past speakers! Looking to give a talk?</p>
         </a>
-        <a href='https://nextjs.org/learn' className='card'>
-          <h3>Next.js Learn &rarr;</h3>
-          <p>Learn about Next.js by following an interactive tutorial!</p>
+        <a href='/meetups' className='card'>
+          <h3>Meetups</h3>
+          <p>Looking for an old talk? Want to see what's coming up?</p>
         </a>
-        <a
-          href='https://github.com/zeit/next.js/tree/master/examples'
-          className='card'
-        >
-          <h3>Examples &rarr;</h3>
-          <p>Find other example boilerplates on the Next.js GitHub.</p>
+        <a href='/about'className='card'>
+          <h3>About JsLou</h3>
+          <p>Learn more about JsLou and what we aim to do.</p>
         </a>
       </div>
     </div>
 
+{/* TODO: CHANGE TO STYLED COMPONENTS */}
     <style jsx>{`
       .hero {
         width: 100%;
@@ -82,7 +88,7 @@ const Home = () => (
         color: #333;
       }
     `}</style>
-  </div>
+  </Main>
 )
 
 export default Home

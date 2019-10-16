@@ -1,56 +1,44 @@
 import React from 'react'
-import Link from 'next/link'
+import styled from 'styled-components'
+import logo from '../public/images/logo.png'
+import ActiveLink from './activeLink';
+
+const Icon = styled.img`
+  width: 50px;
+  height: 50px; 
+`
+
+const NavContainer = styled.nav`
+  margin: 0 10em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+`
+
+const NavLink = styled.div`
+  display: flex;
+  align-items: center;
+  padding: 6px 8px;
+`
 
 const links = [
-  { href: 'https://zeit.co/now', label: 'ZEIT' },
-  { href: 'https://github.com/zeit/next.js', label: 'GitHub' }
-].map(link => {
-  link.key = `nav-link-${link.href}-${link.label}`
-  return link
-})
+  { href: '/', label: 'JsLou', key: "nav-link-home", icon: logo },
+  { href: '/about', label: 'About', key: "nav-link-about", icon: logo },
+  { href: '/speakers', label: 'Speakers', key: "nav-link-speakers", icon: logo },
+  { href: '/meetups', label: 'Meetups', key: "nav-link-meetups", icon: logo },
+]
 
 const Nav = () => (
-  <nav>
-    <ul>
-      <li>
-        <Link href='/'>
-          <a>Home</a>
-        </Link>
-      </li>
+  <NavContainer>
       {links.map(({ key, href, label }) => (
-        <li key={key}>
-          <a href={href}>{label}</a>
-        </li>
+        <NavLink key={key}>
+          <ActiveLink href={href}>
+            <Icon src={logo} />
+            {label}
+          </ActiveLink>
+        </NavLink>
       ))}
-    </ul>
-
-    <style jsx>{`
-      :global(body) {
-        margin: 0;
-        font-family: -apple-system, BlinkMacSystemFont, Avenir Next, Avenir,
-          Helvetica, sans-serif;
-      }
-      nav {
-        text-align: center;
-      }
-      ul {
-        display: flex;
-        justify-content: space-between;
-      }
-      nav > ul {
-        padding: 4px 16px;
-      }
-      li {
-        display: flex;
-        padding: 6px 8px;
-      }
-      a {
-        color: #067df7;
-        text-decoration: none;
-        font-size: 13px;
-      }
-    `}</style>
-  </nav>
+  </NavContainer>
 )
 
 export default Nav
