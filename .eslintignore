@@ -1,0 +1,4 @@
+/node_modules/**
+/.next/**
+/pubic/**
+/next.config.js

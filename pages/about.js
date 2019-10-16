@@ -1,12 +1,12 @@
-import Main from '../layouts/main'
+import Main from '../layouts/main';
 
 const About = () => {
-    return (
+  return (
     <Main>
-        <h1>ABOUT</h1>
-        <p>TODO...</p>
+      <h1>ABOUT</h1>
+      <p>TODO...</p>
     </Main>
-    )
-}
+  );
+};
 
 export default About;
