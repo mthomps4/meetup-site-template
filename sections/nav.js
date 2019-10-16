@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
+import ActiveLink from '../components/activeLink';
 import logo from '../public/images/logo.png';
-import ActiveLink from './activeLink';
 
 const Icon = styled.img`
   width: 50px;
@@ -9,9 +9,8 @@ const Icon = styled.img`
 `;
 
 const NavContainer = styled.nav`
-  margin: 0 10em;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 `;
 

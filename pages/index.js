@@ -1,23 +1,37 @@
-import React from 'react';
 import styled from 'styled-components';
+import Button from '../components/button';
 import Main from '../layouts/main';
 
-const FakeButton = styled.button`
+const StyledButton = styled(Button)`
   /* Adapt the colors based on primary prop */
-  background: ${props => (props.primary ? 'red' : 'white')};
-  color: ${props => (props.primary ? 'white' : 'red')};
-
+  background-color: green;
+  color: white;
+  font-weight: bold;
+  border-color: green;
   font-size: 1em;
-  margin: 1em;
-  padding: 0.25em 1em;
-  border: 2px solid red;
-  border-radius: 3px;
+  padding: 1em;
+  border-radius: 0px;
 `;
+
+const handlePrimaryClick = e => {
+  e.preventDefault();
+  console.log('PRIMARY BUTTON CLICK');
+};
+
+const handleNormalClick = e => {
+  e.preventDefault();
+  console.log('PRIMARY BUTTON CLICK');
+};
 
 const Home = () => (
   <Main>
-    <FakeButton>FAKE BUTTON</FakeButton>
-    <FakeButton primary>FAKE BUTTON w/ Props</FakeButton>
+    <Button primary handleOnClick={e => handlePrimaryClick(e)}>
+      Primary Button
+    </Button>
+
+    <Button handleOnClick={e => handleNormalClick(e)}>Normal Button</Button>
+
+    <StyledButton>Extended Button</StyledButton>
 
     <div className="hero">
       <h1 className="title">Welcome to JsLou!</h1>
