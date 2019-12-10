@@ -6,7 +6,7 @@ const data = {
   meetups,
 };
 
-const readOnlyData = Object.freeze(data);
+export default Object.freeze(data);
 
 export const speakerById = id =>
   readOnlyData.speakers.find(speaker => speaker.id == id);

@@ -5,7 +5,6 @@ export default [
     lastName: 'Beech',
     github: 'rainbow86',
     twitter: '@theshannonbeech',
-    talkIds: [2, 4],
   },
   {
     id: 2,
@@ -13,6 +12,5 @@ export default [
     lastName: 'Thompson',
     github: 'mthomps4',
     twitter: '@mthomps4',
-    talkIds: [1, 3, 5],
   },
 ];

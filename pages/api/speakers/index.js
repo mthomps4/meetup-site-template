@@ -1,4 +1,4 @@
-import { getSpeakers } from '../../../data/helpers';
+import { getSpeakers } from '../../../data';
 
 export default (_req, res) => {
   const speakers = getSpeakers();

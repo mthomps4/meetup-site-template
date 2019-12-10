@@ -1,4 +1,4 @@
-import { speakerById } from '../../../data/helpers';
+import { speakerById } from '../../../data';
 
 export default (req, res) => {
   const {
