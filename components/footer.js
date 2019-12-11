@@ -14,14 +14,14 @@ const Footer = () => {
           width: '50%',
           borderRight: '1px solid red',
         }}>
-        Left
+        Footer-Left
       </Box>
       <Box
         sx={{
           backgroundColor: 'muted',
           width: '50%',
         }}>
-        Right
+        Footer-Right
       </Box>
     </Container>
   );
