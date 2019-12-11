@@ -11,10 +11,10 @@ const MeetupDetails = () => {
   return <p>Next Meetup Details</p>;
 };
 
-const Home = () => (
+const HomePage = () => (
   <Main>
     <DualBlock first={<JsLou />} second={<MeetupDetails />} />
   </Main>
 );
 
-export default Home;
+export default HomePage;

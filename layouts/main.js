@@ -4,21 +4,21 @@ import Footer from '../components/footer';
 import Meta from '../components/meta';
 import Nav from '../components/nav';
 
-const Main = styled(Flex)({
-  width: '100%',
-  justifyContent: 'center',
-});
+const Main = styled(Flex)`
+  width: 100%;
+  justify-content: center;
+`;
 
-const Container = styled(Flex)({
-  flexDirection: 'column',
-  minHeight: '100vh',
-  minWidth: '1200px',
-});
+const Container = styled(Flex)`
+  flex-direction: column;
+  min-height: 100vh;
+  min-width: 1200px;
+`;
 
-const MainBody = styled(Flex)({
-  width: '100%',
-  flexGrow: 1,
-});
+const MainBody = styled(Flex)`
+  width: 100%;
+  flex-grow: 1;
+`;
 
 export default ({ children }) => (
   <>

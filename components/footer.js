@@ -1,9 +1,9 @@
 import styled from '@emotion/styled';
 import { Box, Flex } from '@theme-ui/components';
 
-const Container = styled(Flex)({
-  width: '100%',
-});
+const Container = styled(Flex)`
+  width: 100%;
+`;
 
 const Footer = () => {
   return (

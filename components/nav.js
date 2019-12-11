@@ -3,9 +3,9 @@ import { Button, Flex, Link } from '@theme-ui/components';
 import React from 'react';
 import ThemeToggle from './themeToggle';
 
-const Container = styled(Flex)({
-  width: '100%',
-});
+const Container = styled(Flex)`
+  width: '100%';
+`;
 
 const Nav = () => (
   <Container>
