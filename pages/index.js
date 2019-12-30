@@ -1,8 +1,8 @@
 import { DualBlock } from '@components';
 import { MainLayout } from '@layouts';
 
-const JsLou = () => {
-  return <p>JsLou Logo</p>;
+const Logo = () => {
+  return <p>Logo</p>;
 };
 
 const MeetupDetails = () => {
@@ -11,7 +11,7 @@ const MeetupDetails = () => {
 
 const HomePage = () => (
   <MainLayout>
-    <DualBlock first={<JsLou />} second={<MeetupDetails />} />
+    <DualBlock first={<Logo />} second={<MeetupDetails />} />
   </MainLayout>
 );
 

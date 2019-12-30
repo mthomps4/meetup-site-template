@@ -1,5 +1,5 @@
 {
-  "name": "jslou",
+  "name": "meetup-template",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -12,8 +12,6 @@
     "@chakra-ui/core": "^0.5.2",
     "@emotion/core": "^10.0.27",
     "@emotion/styled": "^10.0.27",
-    "@styled-system/should-forward-prop": "^5.1.4",
-    "@styled-system/theme-get": "^5.1.2",
     "emotion-theming": "^10.0.27",
     "next": "9.1.1",
     "next-images": "^1.2.0",
