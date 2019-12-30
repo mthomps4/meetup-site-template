@@ -11,7 +11,7 @@ export default ({ children }) => (
         justifyContent="center"
         bg="gray.900"
         color="white"
-        minH="100vh"
+        minH={{ base: '90vh', md: '90vh' }}
         w="100%">
         <Flex bg="gray.700" w="100%">
           {children}
