@@ -1,4 +1,4 @@
-import { getMeetups } from '../../../data';
+import { getMeetups } from '@data';
 
 export default (_req, res) => {
   const meetups = getMeetups();

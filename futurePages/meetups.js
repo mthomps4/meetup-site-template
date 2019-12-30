@@ -8,29 +8,27 @@ const ImageContainer = () => {
       w="600px"
       h="600px"
       size="600px"
-      objectFit="cover"
-      src="http://lorempixel.com/600/600"
-      fallbackSrc="https://via.placeholder.com/600"
-      alt="ABOUT IMAGE"
+      src="https://lorempixel.com/600/600"
+      alt="MEETUP IMAGE"
     />
   );
 };
 
-const About = () => {
+const Meetups = () => {
   return (
     <div>
-      <h1>About</h1>
+      <h1>Meetups</h1>
       <p>TODO...</p>
     </div>
   );
 };
 
-const AboutPage = () => {
+const MeetupsPage = () => {
   return (
     <MainLayout>
-      <DualBlock first={<ImageContainer />} second={<About />} />
+      <DualBlock first={<ImageContainer />} second={<Meetups />} />
     </MainLayout>
   );
 };
 
-export default AboutPage;
+export default MeetupsPage;

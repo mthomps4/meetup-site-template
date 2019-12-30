@@ -1,8 +1,5 @@
-# JsLou 
+# Meetup Site Template
 
-## Tech Stack 
-Next JS 
-Now
-... 
-
-TODO 
+## Tech Stack
+Next JS
+Chakra-UI

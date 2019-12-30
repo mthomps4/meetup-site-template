@@ -1,7 +1,5 @@
-// import styled from '@emotion/styled';
-// import { Flex } from '@theme-ui/components';
-import DualBlock from '../components/DualBlock';
-import Main from '../layouts/main';
+import { DualBlock } from '@components';
+import { MainLayout } from '@layouts';
 
 const JsLou = () => {
   return <p>JsLou Logo</p>;
@@ -12,9 +10,9 @@ const MeetupDetails = () => {
 };
 
 const HomePage = () => (
-  <Main>
+  <MainLayout>
     <DualBlock first={<JsLou />} second={<MeetupDetails />} />
-  </Main>
+  </MainLayout>
 );
 
 export default HomePage;
