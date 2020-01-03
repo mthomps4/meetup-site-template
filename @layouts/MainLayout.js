@@ -1,7 +1,7 @@
 import { Flex } from '@chakra-ui/core';
 import { Footer, Meta, Nav } from '../@components';
 
-const MAX_WIDTH = '1200px';
+const MAX_WIDTH = { base: '100%', sm: '', md: '', lg: '1200px' };
 export default ({ children }) => (
   <>
     <Meta />
@@ -11,7 +11,7 @@ export default ({ children }) => (
         justifyContent="center"
         bg="gray.900"
         color="white"
-        minH={{ base: '90vh', md: '90vh' }}
+        minH={{ base: '95vh' }}
         w="100%">
         <Flex bg="gray.700" w="100%">
           {children}

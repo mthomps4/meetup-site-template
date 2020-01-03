@@ -14,6 +14,7 @@ const dummyMeetup = {
   speaker: {
     firstName: 'Joe',
     lastName: 'Cool',
+    fullName: 'Joe Cool',
     email: 'example@test.com',
     github: 'github.com',
     twitter: '@twitter',

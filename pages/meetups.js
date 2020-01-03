@@ -1,27 +1,87 @@
-import { Flex, Spinner, Text } from '@chakra-ui/core';
+import { Box, Avatar, Grid, Flex, Spinner, Text } from '@chakra-ui/core';
 import { DualBlock } from '@components';
 import { MainLayout } from '@layouts';
 import fetch from 'isomorphic-unfetch';
 import { useEffect, useState } from 'react';
 
+const MeetupTitle = ({ title }) => {
+  return (
+    <Text color="gray.900" fontWeight="bold">
+      {title}
+    </Text>
+  );
+};
+
 const DescriptionBlock = () => {
   return (
     <Flex flexDirection={{ base: 'column' }} my="2rem">
       <h1>Meetups</h1>
-      <p>Previous list of meetups coming soon...</p>
+      <p>Previous meetups of 2019 to now.</p>
     </Flex>
   );
 };
 
-const MeetupCard = ({ meetup }) => {
-  <Flex w="100%" h="500px" bg="blue.300">
-    <Avatar></Avatar>
-  </Flex>;
-};
+const MeetupCard = ({ meetup }) => (
+  <Flex
+    w="100%"
+    h="auto"
+    bg="gray.50"
+    color="gray.900"
+    flexDirection="column"
+    borderRadius="20px"
+    p={3}>
+    <Flex
+      w="100%"
+      flexDirection="column"
+      justifyContent="center"
+      alignItems="center"
+      borderBottomColor="g.700"
+      borderBottomWidth="1px"
+      mb={4}>
+      <Avatar
+        // Name = Falback with Initials
+        name={meetup.speaker.fullName}
+        //size="2xl"
+        w="180px"
+        h="180px"
+        src="https://i.pravatar.cc/300"
+      />
+      <Text>
+        <Text fontWeight="bold">Speaker: </Text>
+        {meetup.speaker.fullName}
+      </Text>
+    </Flex>
+    <MeetupTitle title={meetup.title} />
+    <Text>{meetup.description}</Text>
+    <Text fontWeight="bold" my={2}>
+      Links:{' '}
+    </Text>
+    {meetup.links.map(link => (
+      <Text>{link}</Text>
+    ))}
+    <Text fontWeight="bold" mt={3}>
+      Location:{' '}
+    </Text>
+    <Text>{meetup.location.fullAddress}</Text>
+    <Flex my={2} justifyContent="space-around">
+      <Text>{meetup.speaker.twitter}</Text>
+      <Text>{meetup.speaker.github}</Text>
+    </Flex>
+  </Flex>
+);
 
 const Meetups = ({ meetups }) => {
   return meetups ? (
-    <Grid templateColumns="repeat(4, 1fr)" gap={6}>
+    <Grid
+      m={{ base: 1, sm: 1, md: 3, lg: 4 }}
+      templateColumns={{
+        base: 'repeat(1, 1fr)',
+        sm: 'repeat(1, 1fr)',
+        md: 'repeat(2, 1fr)',
+        lg: 'repeat(2, 1fr)',
+      }}
+      w="100%"
+      gap={5}>
       {meetups.map(m => (
         <MeetupCard key={m.title} meetup={m} />
       ))}
@@ -75,10 +135,10 @@ const MeetupsPage = () => {
 
   return (
     <MainLayout>
-      <DualBlock
-        first={<DescriptionBlock />}
-        second={<Meetups meetups={meetups} />}
-      />
+      <Box maxW={{ base: '80%' }} m="0 auto">
+        <DescriptionBlock />
+        <Meetups meetups={meetups} />
+      </Box>
     </MainLayout>
   );
 };
