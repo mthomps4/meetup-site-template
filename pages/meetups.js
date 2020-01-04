@@ -1,5 +1,4 @@
-import { Box, Avatar, Grid, Flex, Spinner, Text } from '@chakra-ui/core';
-import { DualBlock } from '@components';
+import { Avatar, Box, Flex, Grid, Spinner, Text } from '@chakra-ui/core';
 import { MainLayout } from '@layouts';
 import fetch from 'isomorphic-unfetch';
 import { useEffect, useState } from 'react';
@@ -87,8 +86,8 @@ const Meetups = ({ meetups }) => {
       ))}
     </Grid>
   ) : (
-    <Text>No meetups found...</Text>
-  );
+      <Text>No meetups found...</Text>
+    );
 };
 
 const MeetupsPage = () => {

@@ -1,7 +1,7 @@
 import { Flex } from '@chakra-ui/core';
 
 const DualBlock = ({ first, second }) => (
-  <Flex flexDirection={{ base: 'column', md: 'row' }} w="100%">
+  <Flex my={5} flexDirection={{ base: 'column', md: 'row' }} w="100%">
     <Flex
       w={{ base: '100%', md: '50%' }}
       h={{ base: 'auto' }}

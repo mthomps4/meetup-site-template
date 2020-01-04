@@ -1,10 +1,10 @@
-import { DualBlock } from '@components';
-import { Image, Flex } from '@chakra-ui/core';
+import { Flex, Image } from '@chakra-ui/core';
+import { DualBlock, NextMeetupDetails } from '@components';
 import { MainLayout } from '@layouts';
 
 const LogoContainer = () => {
   return (
-    <Flex my={{ base: '2rem' }} justifyContent="center">
+    <Flex my={{ base: 5 }} justifyContent="center">
       <Image
         size={{ base: '80%' }}
         objectFit="cover"
@@ -16,14 +16,12 @@ const LogoContainer = () => {
   );
 };
 
-const MeetupDetails = () => {
-  return <p>Next Meetup Details</p>;
+const HomePage = () => {
+  return (
+    <MainLayout>
+      <DualBlock first={<LogoContainer />} second={<NextMeetupDetails />} />
+    </MainLayout>
+  )
 };
-
-const HomePage = () => (
-  <MainLayout>
-    <DualBlock first={<LogoContainer />} second={<MeetupDetails />} />
-  </MainLayout>
-);
 
 export default HomePage;
